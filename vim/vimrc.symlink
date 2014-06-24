@@ -14,7 +14,7 @@
 ":nnoremap <silent> <esc> :noh <cr>
 
 "Move swapfiles to a temp folder
-:set dir =~/tmp
+:set dir =/tmp
 
 :filetype plugin on
 :filetype indent on
