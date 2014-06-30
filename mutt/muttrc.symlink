@@ -1,11 +1,12 @@
-# mailcap is not functioning properly, at least with html files...
-set implicit_autoview
-auto_view text/html
 
 set beep_new
 
+# set implicit_autoview
+auto_view text/html
+
 ## you need to install this one!!!
 macro pager \Cu "|urlview<enter>" "call urlview to open links"
+#macro pager \cb <pipe-entry>'w3m'<enter> 'Follow links in w3m'
 
 set mailcap_path=~/.mutt/mailcap
 set alias_file=~/.mutt/aliases

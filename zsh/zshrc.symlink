@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh configuration.
 ZSH=/opt/oh-my-zsh
-ZSH_CUSTOM=$HOME/dotfiles
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -16,6 +15,17 @@ alias pms=/opt/pms/mps
 # Google Search function
 function search {
 w3m "www.google.com/search?q=$(echo $@ | sed 's/ /+/g')"}
+
+#DIRSTACKSIZE=9
+#DIRSTACKFILE=~/.zdirs
+#if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+#	dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+#	[[ -d $dirstack[1] ]] && cd $dirstack[1] #&& cd $OLDPWD
+#fi
+#
+#chpwd() {
+#	print -l $PWD ${(u)dirstack}> $DIRSTACKFILE
+#}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -52,7 +62,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git)
-plugins=(git)
+plugins=(git tilingaware)
 
 source $ZSH/oh-my-zsh.sh
 

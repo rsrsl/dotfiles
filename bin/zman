@@ -1,0 +1,3 @@
+#!/bin/bash
+# function to search zsh documentation
+PAGER="less -g -s '+/^ "$1$"'" man zshall
