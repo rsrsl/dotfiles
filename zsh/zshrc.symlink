@@ -1,5 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH=/opt/oh-my-zsh
+<<<<<<< HEAD
+=======
+#ZSH_CUSTOM=$HOME/dotfiles
+>>>>>>> ecbe75cc7748a1b886941b041084e433afab2666
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -85,7 +89,6 @@ for exit in png jpg gif; do alias -s $ext=$PICVIEW; done
 for ext in mpg wmv avi mkv; do alias -s $ext=$MOVPLAY; done
 for ext in wav mp3 ogg; do alias -s $ext=$SNDPLAY; done
 
-export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -101,5 +104,5 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
