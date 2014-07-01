@@ -65,7 +65,7 @@
 :autocmd FileType latex :nnoremap <buffer> <localleader>c I#<esc>
 :autocmd FileType python :nnoremap <buffer> <localleader>C ^x
 
-" :autocmd BufReadPost * :echom ">^.^< Hello Supervisor" 
+" :autocmd BufReadPost * :echom ">^.^< Hello Supervisor"
 
 " VimLatex settings
 :set grepprg=grep\ -nH\$*
@@ -79,6 +79,8 @@
 
 :let g:calendar_google_calendar = 1
 :let g:calendar_google_task = 1
+
+ :let g:airline_powerline_fonts = 1
 
 :helptags ~/.vim/bundle/vim-nerdtree/doc
 execute pathogen#infect()

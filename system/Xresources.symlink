@@ -1,4 +1,3 @@
-
 XTerm*termName: xterm-256color
 XTerm*utf8:1
 XTerm*locale: true
@@ -15,14 +14,13 @@ XTerm*locale: true
 ! These used to be XTerm*
 *pointerColor: white
 *pointerColorBackground: black
-*cursorColor:yellow
 *cursorBlink:true
-*faceName: monofur:pixelsize=15
+*faceName: monofur for Powerline:pixelsize=15
 *fullscreen:never
 
 XTerm*urgentOnBell:true
 
-#include ".dotfiles/colors/multicolor"
+!#include ".dotfiles/colors/multicolor"
 
 ! Multicolor
 
