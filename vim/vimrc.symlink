@@ -1,17 +1,31 @@
-:colorscheme darkblue
-:let maplocalleader = ","
+execute pathogen#infect()
+
+:colorscheme delek
+":let maplocalleader = ","
+:let mapleader = ","
 
 "Show trailing whitespaces and end of line character
-:set list listchars=tab:>-,trail:-,extends:>,eol:«
+"«
 "¬
 
 "Open and edit vimrc, then source it at the end of the hacks
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
+"Make tags and labeled tags
+:inoremap <leader>nt <++>
+:inoremap <leader>nT <++><esc>hi
+
 "Remove highlighting with escape in normal mode
 ":autocmd BufRead * :<esc>
 ":nnoremap <silent> <esc> :noh <cr>
+"
+"Do not select line numbers with the mouse
+:set mouse=a
+
+"Tabs
+:set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+:set list listchars=tab:>-,trail:-,extends:>,eol:¬"
 
 "Move swapfiles to a temp folder
 :set dir =/tmp
@@ -80,9 +94,9 @@
 :let g:calendar_google_calendar = 1
 :let g:calendar_google_task = 1
 
- :let g:airline_powerline_fonts = 1
+:let g:airline_powerline_fonts = 1
+:let g:airline_theme='murmur'
+
 
 :helptags ~/.vim/bundle/vim-nerdtree/doc
-execute pathogen#infect()
-
 

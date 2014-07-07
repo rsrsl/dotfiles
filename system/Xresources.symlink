@@ -60,6 +60,14 @@ XTerm*urgentOnBell:true
 *foreground: #d4d4d4
 
 *cursorColor: darkorange2
+
+URxvt*depth: 32
+URxvt*background: rgba:1000/1000/1000/cccc
+URxvt*font: xft:monofur for Powerline:pixelsize=15
+!URxvt*scrollstyle:next
+URxvt*scrollBar:false
+URxvt*letterSpace:+1
+
 ! Mellow colorscheme, very enjoyable
 !*background: rgb:00/00/00
 !*foreground: rgb:ff/ff/ff
