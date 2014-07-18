@@ -1,12 +1,7 @@
 execute pathogen#infect()
 
 :colorscheme delek
-":let maplocalleader = ","
 :let mapleader = ","
-
-"Show trailing whitespaces and end of line character
-"«
-"¬
 
 "Open and edit vimrc, then source it at the end of the hacks
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -16,10 +11,6 @@ execute pathogen#infect()
 :inoremap <leader>nt <++>
 :inoremap <leader>nT <++><esc>hi
 
-"Remove highlighting with escape in normal mode
-":autocmd BufRead * :<esc>
-":nnoremap <silent> <esc> :noh <cr>
-"
 "Do not select line numbers with the mouse
 :set mouse=a
 
