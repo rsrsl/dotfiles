@@ -1,0 +1,63 @@
+Script started on Tue 02 Sep 2014 10:03:46 PM CEST
+[1m[7m%[27m[1m[0m                                                                           ]2;rsrsl@deep-thought: /opt/dotfiles]1;/opt/dotfiles[0m[27m[24m[J[32m/opt/dotfiles[34m [[39m [K[39C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[58D=llsl  lls>
+]2;ls --color=tty]1;ls[0m[01;34mbin[0m     [01;34mgit[0m         [01;34mmutt[0m       [01;34mscript[0m  typescript  [01;34mzsh[0m
+[01;34mcolors[0m  LICENSE.md  README.md  [01;34msystem[0m  [01;34mvim[0m
+[1m[7m%[27m[1m[0m                                                                           ]2;rsrsl@deep-thought: /opt/dotfiles]1;/opt/dotfiles[0m[27m[24m[J[32m/opt/dotfiles[34m [[39m [K[39C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[58D=sscr[31m......[0m[0m[27m[24m[J[32m/opt/dotfiles[34m [[39m scr[K[36C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[55D
+[J[0mSCREEN_NO     [Jscript        [Jscriptreplay[J[A[0m[27m[24m[39m[16Cscr[K[36C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[39m[55D[31m......[0mSCREEN_NO[1m=[0m
+[J[7mSCREEN_NO   [0m  [Jscript        [Jscriptreplay[J[A[0m[27m[24m[39m[16CSCREEN_NO[1m=[0m[K[29C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[39m[48D
+[7mSCREEN_NO   [0m  [7mSCREEN_NO   [0m  [A[0m[27m[24m[39m[16CSCREEN_NO[1m=[0m[K[29C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[39m[48D[10Dscript   [0m 
+[14C[7mscript      [0m  SCREEN_NO     [A[0m[27m[24m[39m[16Cscript[K[33C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[39m[52D
+[J[A[22C[1m [0m[0m[27m[24m[J[32m/opt/dotfiles[34m [[39m script /[K[31C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[50D />
+]2;script/]1;script/[1m[7m%[27m[1m[0m                                                                           ]2;rsrsl@deep-thought: /opt/dotfiles/script]1;..tfiles/script[0m[27m[24m[J[32mdotfiles/script[34m [[39m [K[37C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[56D=lls>
+]2;ls --color=tty]1;ls[0m[01;32mbootstrap[0m  [01;32minstall[0m
+[1m[7m%[27m[1m[0m                                                                           ]2;rsrsl@deep-thought: /opt/dotfiles/script]1;..tfiles/script[0m[27m[24m[J[32mdotfiles/script[34m [[39m [K[37C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[56D=ccati  in[31m......[0m[0m[27m[24m[J[32mdotfiles/script[34m [[39m cat install[1m [0m[K[25C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[44D[0m >
+]2;cat install]1;cat#!/usr/bin/env bash
+#
+# Run all dotfiles installers.
+
+set -e
+
+cd "$(dirname $0)"/..
+
+# find the installers and run them iteratively
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+[1m[7m%[27m[1m[0m                                                                           ]2;rsrsl@deep-thought: /opt/dotfiles/script]1;..tfiles/script[0m[27m[24m[J[32mdotfiles/script[34m [[39m [K[37C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[56D=ccat boo[31m......[0m[0m[27m[24m[J[32mdotfiles/script[34m [[39m cat bootstrap[1m [0m[K[23C[33mmaster [31m*[39m[39m [34m] [32m10:03 [33mPM[39m[42D[0m >
+]2;cat bootstrap]1;cat#!/usr/bin/env bash
+#
+# bootstrap installs things.
+
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd)
+
+set -e
+
+echo ''
+
+info () {
+  printf "  [ \033[00;34m..\033[0m ] $1"
+}
+
+user () {
+  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+}
+
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fail () {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit
+}
+
+link_file () {
+  local src=$1 dst=$2
+
+  local overwrite= backup= skip=
+  local action=
+
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
+  then
+
+    if [ "$overwrite_all" == 
