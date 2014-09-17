@@ -63,9 +63,11 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git)
-plugins=(nyan git tilingaware)
+#plugins=(nyan git tilingaware)
+plugins=(vi-mode git tilingaware)
 
 source $ZSH/oh-my-zsh.sh
+export RPS1='$(vi_mode_prompt_info) '$RPS1
 
 # User configuration
 setopt vi
