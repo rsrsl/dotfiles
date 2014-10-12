@@ -15,7 +15,7 @@ XTerm*locale: true
 *pointerColor: white
 *pointerColorBackground: black
 *cursorBlink:true
-*faceName: monofur for Powerline:pixelsize=15
+*faceName: monofur for Powerline:pixelsize=14
 *fullscreen:never
 
 XTerm*urgentOnBell:true
@@ -63,10 +63,11 @@ XTerm*urgentOnBell:true
 
 URxvt*depth: 32
 URxvt*background: rgba:1000/1000/1000/cccc
-URxvt*font: xft:monofur for Powerline:pixelsize=15
+URxvt*font: xft:monofur for Powerline:pixelsize=13
 !URxvt*scrollstyle:next
 URxvt*scrollBar:false
-URxvt*letterSpace:+1
+!URxvt*letterSpace:+1
+URxvt*letterSpace:0
 
 ! Mellow colorscheme, very enjoyable
 !*background: rgb:00/00/00
