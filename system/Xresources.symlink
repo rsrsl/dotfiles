@@ -63,7 +63,7 @@ XTerm*urgentOnBell:true
 
 URxvt*depth: 32
 URxvt*background: rgba:1000/1000/1000/cccc
-URxvt*font: xft:monofur for Powerline:pixelsize=14
+URxvt*font: xft:monofur for Powerline:pixelsize=14:antialias=true
 !URxvt*scrollstyle:next
 URxvt*scrollBar:false
 !URxvt*letterSpace:+1
