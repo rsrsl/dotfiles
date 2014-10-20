@@ -109,4 +109,4 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 export PATH=$PATH:"$HOME/.gem/ruby/2.1.0/bin/"
 
 # added by Anaconda 2.0.1 installer
-export PATH="/opt/anaconda/bin:$PATH"
+# export PATH="/opt/anaconda/bin:$PATH"
