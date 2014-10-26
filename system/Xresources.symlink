@@ -1,7 +1,7 @@
 !XTerm*termName: xterm-256color
-XTerm*termName: termite
-XTerm*utf8:1
-XTerm*locale: true
+!XTerm*termName: termite
+!XTerm*utf8:1
+!XTerm*locale: true
 !XTerm*font: 8x13
 !XTerm*font: 7x13
 !XTerm*reverseVideo:on
@@ -13,13 +13,13 @@ XTerm*locale: true
 !XTerm*faceSize: 9
 
 ! These used to be XTerm*
-*pointerColor: white
-*pointerColorBackground: black
-*cursorBlink:true
-*faceName: monofur for Powerline:pixelsize=14
-*fullscreen:never
-
-XTerm*urgentOnBell:true
+!*pointerColor: white
+!*pointerColorBackground: black
+!*cursorBlink:true
+!*faceName: monofur for Powerline:pixelsize=14
+!*fullscreen:never
+!
+!XTerm*urgentOnBell:true
 
 !#include ".dotfiles/colors/multicolor"
 
@@ -60,15 +60,15 @@ XTerm*urgentOnBell:true
 !*background: #101010
 !*foreground: #d4d4d4
 
-*cursorColor: darkorange2
+!*cursorColor: darkorange2
 
-URxvt*depth: 32
-URxvt*background: rgba:1000/1000/1000/cccc
-*font: xft:monofur for Powerline:pixelsize=14:antialias=true
-!URxvt*scrollstyle:next
-URxvt*scrollBar:false
-!URxvt*letterSpace:+1
-URxvt*letterSpace:0
+!URxvt*depth: 32
+!URxvt*background: rgba:1000/1000/1000/cccc
+!!*font: xft:monofur for Powerline:pixelsize=14:antialias=true
+!!URxvt*scrollstyle:next
+!URxvt*scrollBar:false
+!!URxvt*letterSpace:+1
+!URxvt*letterSpace:0
 
 ! Mellow colorscheme, very enjoyable
 !*background: rgb:00/00/00
