@@ -71,15 +71,13 @@ export RPS1='$(vi_mode_prompt_info) '$RPS1
 
 # User configuration
 setopt vi
+KEYTIMEOUT=1
 
 # Default Programs
-export EDITOR="vim"
-export PAGER="less"
 export BROWSER="firefox"
 export MOVPLAY="vlc"
 export PICVIEW="feh"
 export SNDPLAY="mplayer"
-export TERMINAL="termite"
 
 # File Extesions
 for ext in html org php com net no; do alias -s $ext=$BROWSER; done

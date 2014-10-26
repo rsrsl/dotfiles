@@ -1,0 +1,16 @@
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+
+export EDITOR=vim
+export VISUAL=vim
+export SUDO_EDITOR=rvim
+
+export GREP_OPTIONS=--color=auto
+export LESS=-R
+
+export PAGER=less
+export LESSHISTFILE=$XDG_CACHE_HOME/lesshist
+
+export BROWSER=firefox
+export TERMINAL=termite
